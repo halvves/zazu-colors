@@ -18,7 +18,7 @@ Read [here](http://zazuapp.org/documentation/getting-started/#configure) for con
 
 ## Acknowledgments
 
-Heavy lifting provided by [`Qix-/color`](https://github.com/Qix-/color)
+Color 🔮 provided by [`Qix-/color`](https://github.com/Qix-/color)
 
 Heavily inspired by [colors](http://www.packal.org/workflow/colors) for Alfred.
 
