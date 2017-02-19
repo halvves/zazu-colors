@@ -19,35 +19,54 @@ module.exports = (pluginContext) => {
         }
       }
       const c = color(colorData)
+      const prev = (bgColor, textColor, text) => (`
+        <style>
+          body {
+            background-color:${bgColor};
+            display:flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .prev-text {
+            font-family: monospace;
+            color: ${textColor};
+          }
+        </style>
+        <div class="prev-text">${text}</div>`)
+      const tColor = c.dark() ? '#fff' : '#000'
+      const cHex = c.hex()
+      const cRgb = c.rgb().string()
+      const cRgbPerc = c.rgb().percentString()
+      const cHsl = c.hsl().round().string()
       return new Promise((resolve, reject) => {
         resolve([
           {
             icon: 'fa-paint-brush',
-            title: c.hex(),
+            title: cHex,
             subtitle: 'CSS - Hexadecimal',
-            value: c.hex(),
-            preview: `<style>body{background-color:${c.hex()};}</style>`
+            value: cHex,
+            preview: prev(cHex, tColor, cHex)
           },
           {
             icon: 'fa-paint-brush',
-            title: c.rgb().string(),
+            title: cRgb,
             subtitle: 'CSS - RGB',
-            value: c.rgb().string(),
-            preview: `<style>body{background-color:${c.hex()};}</style>`
+            value: cRgb,
+            preview: prev(cHex, tColor, cRgb)
           },
           {
             icon: 'fa-paint-brush',
-            title: c.rgb().percentString(),
+            title: cRgbPerc,
             subtitle: 'CSS - RGB Percent',
-            value: c.rgb().percentString(),
-            preview: `<style>body{background-color:${c.hex()};}</style>`
+            value: cRgbPerc,
+            preview: prev(cHex, tColor, cRgbPerc)
           },
           {
             icon: 'fa-paint-brush',
-            title: c.hsl().round().string(),
+            title: cHsl,
             subtitle: 'CSS - HSL',
-            value: c.hsl().round().string(),
-            preview: `<style>body{background-color:${c.hex()};}</style>`
+            value: cHsl,
+            preview: prev(cHex, tColor, cHsl)
           }
         ])
       })
