@@ -1,0 +1,24 @@
+{
+  "name": "zazu-colors",
+  "version": "1.0.0",
+  "description": "for of all your 🎨 needs",
+  "blocks": {
+    "input": [
+      {
+        "id": "Colors",
+        "type": "RootScript",
+        "script": "index.js",
+        "connections": [
+          "Copy"
+        ]
+      }
+    ],
+    "output": [
+      {
+        "id": "Copy",
+        "type": "CopyToClipboard",
+        "text": "{value}"
+      }
+    ]
+  }
+}

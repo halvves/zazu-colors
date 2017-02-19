@@ -1,0 +1,29 @@
+{
+  "name": "zazu-colors",
+  "description": "for of all your 🎨 needs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/halvves/zazu-colors",
+    "type": "git"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "zazu.json"
+  ],
+  "author": {
+    "name": "halvves",
+    "email": "hi@halvves.com",
+    "url": "http://halvves.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  }
+}
