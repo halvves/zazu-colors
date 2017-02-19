@@ -25,5 +25,8 @@
   "devDependencies": {
     "snazzy": "^6.0.0",
     "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "color": "^1.0.3"
   }
 }
